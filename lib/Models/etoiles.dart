@@ -1,5 +1,6 @@
 class Etoiles
 {
+  //testgit
   int etoile1;
   int etoile2;
 
