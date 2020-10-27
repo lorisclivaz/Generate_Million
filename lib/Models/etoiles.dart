@@ -1,6 +1,7 @@
 class Etoiles
 {
   //testgit
+  //test2git
   int etoile1;
   int etoile2;
 
