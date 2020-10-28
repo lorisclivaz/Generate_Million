@@ -7,7 +7,6 @@ import 'bottom_screens/fourth_view.dart';
 import 'bottom_screens/second_view.dart';
 import 'bottom_screens/third_view.dart';
 
-// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   Map<int, Color> color = {
     50: const Color.fromRGBO(250, 202, 88, .1),

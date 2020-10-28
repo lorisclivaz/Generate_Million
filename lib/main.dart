@@ -1,14 +1,10 @@
+import 'file:///C:/Users/loris/StudioProjects/Generate_Million/lib/Loading/loadingPage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'app_bottom_navigation.dart';
 import 'home_screen.dart';
 
-/*
-Author Name  :  WeblineIndia  |  https://www.weblineindia.com/
-For more such software development components and code libraries, visit us at
-https://www.weblineindia.com/software-development-resources.html
-Our Github URL : https://github.com/weblineindia
-*/
+
 
 void main() => runApp(MyApp());
 
@@ -41,7 +37,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: colorCustom,
         ),
-        home: HomeScreen(),
+        home: LoadingPage(),
       ),
     );
   }

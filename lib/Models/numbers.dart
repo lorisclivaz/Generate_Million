@@ -1,5 +1,7 @@
 class Numbers
 {
+
+  //Variables
   int nb1;
   int nb2;
   int nb3;
@@ -7,8 +9,7 @@ class Numbers
   int nb5;
 
 
-
-
+  //Constructeur
   Numbers(int nb1, int nb2, int nb3, int nb4, int nb5)
   {
     this.nb1 = nb1;
@@ -18,6 +19,7 @@ class Numbers
     this.nb5 = nb5;
   }
 
+  //Getter et setter
   int get nombre1 {
     return nb1;
   }
