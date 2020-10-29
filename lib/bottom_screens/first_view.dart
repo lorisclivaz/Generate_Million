@@ -18,194 +18,210 @@ class _FirstViewState extends State<FirstView> {
   Etoiles _etoiles = new Etoiles(0, 0);
 
   //Liste de nombre aléatoire
-  List<int> numberList=[5];
-  List<int> etoiles=[2];
+  List<int> numberList= [0,0,0,0,0];
+  List<int> etoiles= [0,0];
   Random random = new Random();
 
-
-
-
-  //Quand on change de page enlève le stockage dans l'application
-  //Empêche la surcharge
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-    print('Dispose first view');
-
-    numberList = [0,0,0,0,0];
-    etoiles = [0,0];
-  }
 
   //Visuel de la page
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SizedBox(height: 5,),
-          Row(
-            children: [
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.50,
-                elevation: 4.0,
-                text: 'Nombre 1 :',
-                background: Colors.white70,
-                textColor: Colors.black,
-              ),
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.20,
-                elevation: 4.0,
-                text: numbers.nombre1.toString(),
-                background: Colors.white70,
-                textColor: Colors.black,
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.50,
-                elevation: 4.0,
-                text: 'Nombre 2 :',
-                background: Colors.white70,
-                textColor: Colors.black,
-              ),
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.20,
-                elevation: 4.0,
-                text: numbers.nombre2.toString(),
-                background: Colors.white70,
-                textColor: Colors.black,
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.50,
-                elevation: 4.0,
-                text: 'Nombre 3 :',
-                background: Colors.white70,
-                textColor: Colors.black,
-              ),
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.20,
-                elevation: 4.0,
-                text: numbers.nombre3.toString(),
-                background: Colors.white70,
-                textColor: Colors.black,
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.50,
-                elevation: 4.0,
-                text: 'Nombre 4 :',
-                background: Colors.white70,
-                textColor: Colors.black,
-              ),
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.20,
-                elevation: 4.0,
-                text: numbers.nombre4.toString(),
-                background: Colors.white70,
-                textColor: Colors.black,
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.50,
-                elevation: 4.0,
-                text: 'Nombre 5 :',
-                background: Colors.white70,
-                textColor: Colors.black,
-              ),
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.20,
-                elevation: 4.0,
-                text: numbers.nombre5.toString(),
-                background: Colors.white70,
-                textColor: Colors.black,
-              ),
-            ],
-          ),
-          SizedBox(
-            height:MediaQuery.of(context).size.height * 0.06,
-          ),
-          //Etoiles row
-          Row(
-            children: [
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.50,
-                elevation: 4.0,
-                text: 'Etoile 1 :',
-                background: Colors.white70,
-                textColor: Colors.black,
-              ),
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.20,
-                elevation: 4.0,
-                text:_etoiles.star1.toString(),
-                background: Colors.white70,
-                textColor: Colors.black,
-              ),
-            ],
-          ),
+    return Scaffold(
 
-          Row(
-            children: [
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.50,
-                elevation: 4.0,
-                text: 'Etoile 2 :',
-                background: Colors.white70,
-                textColor: Colors.black,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
+            Container(
+              padding: EdgeInsets.only(bottom: 6),
+              child: Row(
+                children: [
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.50,
+                    elevation: 4.0,
+                    text: 'Nombre 1 :',
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.20,
+                    elevation: 4.0,
+                    text: numbers.nombre1.toString(),
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                ],
               ),
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.20,
-                elevation: 4.0,
-                text: _etoiles.star2.toString(),
-                background: Colors.white70,
-                textColor: Colors.black,
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 6),
+              child: Row(
+                children: [
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.50,
+                    elevation: 4.0,
+                    text: 'Nombre 2 :',
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.20,
+                    elevation: 4.0,
+                    text: numbers.nombre2.toString(),
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 6),
+              child: Row(
+                children: [
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.50,
+                    elevation: 4.0,
+                    text: 'Nombre 3 :',
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.20,
+                    elevation: 4.0,
+                    text: numbers.nombre3.toString(),
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 6),
+              child: Row(
+                children: [
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.50,
+                    elevation: 4.0,
+                    text: 'Nombre 4 :',
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.20,
+                    elevation: 4.0,
+                    text: numbers.nombre4.toString(),
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 6),
+              child: Row(
+                children: [
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.50,
+                    elevation: 4.0,
+                    text: 'Nombre 5 :',
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.20,
+                    elevation: 4.0,
+                    text: numbers.nombre5.toString(),
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(
+                    color: Colors.black,
+                    width: 8.0
 
-          SizedBox(height:MediaQuery.of(context).size.height * 0.10,),
-          //Button press and reset
-          Row(
-            children: <Widget>[
-              NiceButton(
-                 width: MediaQuery.of(context).size.width * 0.40,
-                elevation: 8.0,
-                radius: 52.0,
-                text: "Press",
-                background: Colors.white12,
-                onPressed: () {
-                  generate();
-
-                },
+                  )
+                )
               ),
-
-              NiceButton(
-                width: MediaQuery.of(context).size.width * 0.40,
-                elevation: 8.0,
-                radius: 52.0,
-                text: "Reset",
-                background: Colors.white12,
-                onPressed: () {
-                  reset();
-                },
+              child: SizedBox(
+                height:MediaQuery.of(context).size.height * 0.03,
               ),
-            ],
-          )
-        ],
+            ),
+            //Etoiles row
+            Container(
+              padding: EdgeInsets.only(bottom: 6, top: 15),
+              child: Row(
+                children: [
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.50,
+                    elevation: 4.0,
+                    text: 'Etoile 1 :',
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.20,
+                    elevation: 4.0,
+                    text:_etoiles.star1.toString(),
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 6),
+              child: Row(
+                children: [
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.50,
+                    elevation: 4.0,
+                    text: 'Etoile 2 :',
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                  NiceButton(
+                    width: MediaQuery.of(context).size.width * 0.20,
+                    elevation: 4.0,
+                    text: _etoiles.star2.toString(),
+                    background: Colors.white70,
+                    textColor: Colors.black,
+                  ),
+                ],
+              ),
+            ),
+
+            SizedBox(height:MediaQuery.of(context).size.height * 0.03,),
+            //Button press and reset
+            Row(
+              children: <Widget>[
+                NiceButton(
+                   width: MediaQuery.of(context).size.width * 0.40,
+                  text: "Press",
+                  background: Colors.white12,
+                  onPressed: () {
+                    generate();
+
+                  },
+                ),
+
+                NiceButton(
+                  width: MediaQuery.of(context).size.width * 0.40,
+                  text: "Reset",
+                  background: Colors.white12,
+                  onPressed: () {
+                    reset();
+                  },
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
@@ -213,18 +229,22 @@ class _FirstViewState extends State<FirstView> {
   //Methode qui va générer les nombres aléatoires
   void generate()
   {
+    numberList.clear();
+    etoiles.clear();
 
-    numberList = [5];
-    etoiles = [2];
 
-    for (var i = 0; i < numberList.length; i++){
+    for (var i = 0; i < 5; i++){
       int random_number = random.nextInt(50) + 1;
-      if (!numberList.contains(random_number)) {numberList.add(random_number);}
+      if (!numberList.contains(random_number)) {
+        numberList.add(random_number);
+      }
     }
 
-    for (var i = 0; i < etoiles.length; i++){
+    for (var i = 0; i < 2; i++){
       int random_etoile = random.nextInt(12) + 1;
-      if (!etoiles.contains(random_etoile) && !numberList.contains(random_etoile)) {etoiles.add(random_etoile);}
+      if (!etoiles.contains(random_etoile)) {
+        etoiles.add(random_etoile);
+      }
     }
 
     //Import la classe model de nombres
