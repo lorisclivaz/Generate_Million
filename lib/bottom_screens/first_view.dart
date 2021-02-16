@@ -138,20 +138,7 @@ class _FirstViewState extends State<FirstView> {
                 ],
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Colors.black,
-                    width: 8.0
 
-                  )
-                )
-              ),
-              child: SizedBox(
-                height:MediaQuery.of(context).size.height * 0.03,
-              ),
-            ),
             //Etoiles row
             Container(
               padding: EdgeInsets.only(bottom: 6, top: 15),
